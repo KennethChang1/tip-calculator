@@ -5,6 +5,8 @@ const numberOfPeople = document.querySelector("#nop");
 const error = document.querySelector(".error");
 const total = document.getElementById("total");
 const custom = document.getElementById("custom");
+const reset = document.querySelector(".reset");
+const test = document.querySelector(".card__header");
 let price = 0;
 let nop = 0;
 let tip = 0;
@@ -14,6 +16,7 @@ let clicked = false;
 input.addEventListener('input', getPrice);
 numberOfPeople.addEventListener('input', getPeople);
 custom.addEventListener('input', getCustom);
+reset.addEventListener('click', resetValue);
 
 button.forEach((e) => {
     e.addEventListener('click', () => {
@@ -37,6 +40,14 @@ function getCustom() {
     customValue = +custom.value;
     clicked = false;
     calculate();
+}
+
+function resetValue(){
+    let reset = 0
+    input.value = "";
+    numberOfPeople.value = "";
+    number.textContent = reset;
+    total.textContent = reset;
 }
 
 function calculateResult() {

@@ -31,8 +31,8 @@ body{
 }
 
 .error{
-    position: relative;
-    left: 90px;
+    position: absolute;
+    right: 30px;
     color: #E17457;
 }
 
@@ -113,6 +113,10 @@ input[type=number] {
     color: #547878;
 }
 
+.input-container{
+    position: relative;
+}
+
 .card-container{
     border-radius: 15px;
     background-color:#00474B;
@@ -142,4 +146,56 @@ input[type=number] {
     font-weight: 700;
     font-size: 48px;
     color: #26C2AE;
+}
+
+.reset{
+    display: block;
+    background-color: #26C2AE;
+    font-size: 20px;
+    width: 333px;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    padding: 9px;
+    cursor: pointer;
+}
+
+@media (max-width:600px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .input{
+        width: 100%;
+    }
+
+    .card-container{
+        width: 100%;
+        height: 257px;
+        padding: 2rem 1rem;
+    }
+
+    .card{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card__number{
+        font-size: 32px;
+    }
+
+    .input--person{
+        margin-bottom: 2rem;
+    }
+
+    .error{
+        right: 0;
+    }
+
+    .reset{
+        width: 100%;
+    }
 }
